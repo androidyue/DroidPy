@@ -3,7 +3,7 @@
 from subprocess import Popen,PIPE,STDOUT
 from os import system
 
-def gpull():
+def gpush():
     branchColorRule = readFromShell('git config color.branch')
     if ('always' == branchColorRule):
         system('git config color.branch auto')
@@ -22,4 +22,4 @@ def readFromShell(command):
     result = p.stdout.read().strip()
     return result
 
-gpull()
+gpush()
