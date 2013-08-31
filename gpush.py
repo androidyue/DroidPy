@@ -10,7 +10,7 @@ def gpull():
 
     getBranch = "git branch | sed -n '/\* /s///p'"
     gitBranch = readFromShell(getBranch)
-    command = 'git pull origin %s'%(gitBranch)
+    command = 'git push origin %s'%(gitBranch)
     print command
     system(command)
     if ('always' == branchColorRule):
